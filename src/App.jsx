@@ -1,14 +1,17 @@
 import './App.css'
+import MetaTags from "./components/MetaTags.jsx";
 
 console.log("Portfolio site loaded");
 
 function App() {
   return (
     <>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <title>Aregtheeditor</title>
-        </head>
+        <MetaTags
+            title={"Aregtheeditor"}
+            description="Areg's small little corner in the internet :3"
+            name="Aregtheeditor"
+            image="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ"
+        />
         <body id="body">
         <div className="container">
             <h1>Aregtheeditor</h1>
