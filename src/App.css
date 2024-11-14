@@ -57,7 +57,9 @@ h2 {
 .videos {
   display: flex;
   columns: 1;
+  align-content: center;
   justify-content: center;
+  align-items: center;
   gap: 2vh;
   flex-direction: column;
   margin-bottom: 10px;
@@ -71,7 +73,7 @@ h2 {
 }
 
 .video {
-  width: 100%;
+  width: 80%;
 }
 
 .secondvid
@@ -139,5 +141,5 @@ a:hover,.menu-item:hover,i:hover {
 .credit {
   font-size: 16px;
   color: #cccccc81;
-
+  margin-bottom: 30px;
 }
