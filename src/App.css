@@ -103,23 +103,6 @@ h2 {
   font-size: 1rem;
 }
 
-.social-links {
-  margin-top: 2vh;
-  color: yellow;
-}
-
-.social-links a,i {
-  color: #bbb;
-  margin: 0 1vh;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-
-a:hover,.menu-item:hover,i:hover {
-  color: rgb(255, 208, 0);
-  transition: 0.5s;
-}
 
 .pfp {
   width: 20%;
@@ -131,15 +114,4 @@ a:hover,.menu-item:hover,i:hover {
   .pfp{
     width: 10%;
   }
-}
-
-.menu-item {
-  color: #ccc;
-  text-shadow: 0.2vh 0.2vh 0 rgba(255, 255, 0, 0.699);
-}
-
-.credit {
-  font-size: 16px;
-  color: #cccccc81;
-  margin-bottom: 30px;
 }

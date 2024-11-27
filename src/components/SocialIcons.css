@@ -1,0 +1,18 @@
+.socialicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    gap: 20px;
+}
+
+.socialicons a {
+    color: #ffffff;
+    transition: opacity 0.2s ease;
+}
+
+.socialicons a:hover {
+    opacity: 0.8;
+}

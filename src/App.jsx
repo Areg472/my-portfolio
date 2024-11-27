@@ -1,5 +1,7 @@
 import './App.css'
 import MetaTags from "./components/MetaTags.jsx";
+import { Credits } from "./components/Credits.jsx";
+import {SocialIcons} from "./components/SocialIcons.jsx";
 
 console.log("Portfolio site loaded");
 
@@ -18,6 +20,7 @@ function App() {
             <h2>Youtuber, video editor, developer</h2>
             <div className="card">
                 <img className="pfp" src="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ" width="8" alt="Profile Picture"/>
+                <SocialIcons/>
                 <div className="videos">
                     <div className="video">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/st007EZniyU"
@@ -37,13 +40,8 @@ function App() {
                     </div>
                 </div>
             </div>
-            <div className="social-links">
-                <a href="#"><i className="bi bi-instagram"></i></a>
-                <a href="#"><i className="bi bi-facebook"></i> </a>
-                <a href="#"><i className="bi bi-twitter-x"></i></a>
-            </div>
         </div>
-        <a href="https://github.com/Pirkisek" target="_blank"><p className="credit">Made with @pirkisek</p></a>
+        <Credits/>
         </body>
     </>
   )

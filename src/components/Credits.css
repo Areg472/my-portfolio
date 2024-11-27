@@ -1,0 +1,18 @@
+.credit {
+    font-size: 16px;
+    color: #cccccc81;
+    margin-bottom: 30px;
+}
+
+.social-links .hmm,i {
+    color: #bbb;
+    margin: 0 1vh;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+.hmm:hover,.menu-item:hover,i:hover {
+    color: rgb(255, 208, 0);
+    transition: 0.5s;
+}
