@@ -40,8 +40,8 @@ export function Homepage() {
                         </div>
                     </div>
                 </div>
+                <Credits/>
             </div>
-            <Credits/>
             </body>
         </>
     )

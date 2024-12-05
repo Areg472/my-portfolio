@@ -35,9 +35,7 @@ h2 {
     background-color: #26262a;
     border-radius: 5vh;
     padding-bottom: 5vh;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     padding-top: 3vh;
 }
 
@@ -48,8 +46,6 @@ h2 {
         border-radius: 5vh;
         padding-bottom: 5vh;
         width: 100vh;
-        margin-left: auto;
-        margin-right: auto;
         padding-top: 3vh;
     }
 }
@@ -57,7 +53,6 @@ h2 {
 .videos {
     display: flex;
     columns: 1;
-    align-content: center;
     justify-content: center;
     align-items: center;
     gap: 2vh;
@@ -73,7 +68,7 @@ h2 {
 }
 
 .video {
-    width: 80%;
+    width: 90%;
 }
 
 .secondvid
@@ -107,7 +102,15 @@ h2 {
 .pfp {
     width: 20%;
     border-radius: 50%;
-    margin: 2vh;
+    margin-left: 40.5%;
+}
+
+@media (min-width: 1024px) {
+    .pfp {
+        width: 20%;
+        border-radius: 50%;
+        margin-left: 45%;
+    }
 }
 
 @media (min-width: 1024px) {
