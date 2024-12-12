@@ -2,6 +2,7 @@ import MetaTags from "../components/MetaTags.jsx";
 import {SocialIcons} from "../components/SocialIcons.jsx";
 import {Credits} from "../components/Credits.jsx";
 import "./Homepage.css";
+import AnimatedText from "../components/AnimatedText.jsx";
 
 
 export function Homepage() {
@@ -16,10 +17,10 @@ export function Homepage() {
             <body id="body">
             <div className="container">
                 <h1>Aregtheeditor</h1>
-                <h2>Youtuber, video editor, developer</h2>
                 <div className="card">
                     <img className="pfp" src="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ" width="8"
                          alt="Profile Picture"/>
+                    <AnimatedText/>
                     <SocialIcons/>
                     <div className="videos">
                         <div className="video">
