@@ -3,6 +3,7 @@ import {SocialIcons} from "../components/SocialIcons.jsx";
 import {Credits} from "../components/Credits.jsx";
 import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
+import {Navbar} from "../components/Navbar.jsx";
 
 
 export function Homepage() {
@@ -14,9 +15,9 @@ export function Homepage() {
                 name="Aregtheeditor"
                 image="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ"
             />
-            <body id="body">
+            <Navbar/>
             <div className="container">
-                <h1>Aregtheeditor</h1>
+                <h1 className="text-3xl md:text-5xl">Aregtheeditor</h1>
                 <div className="card">
                     <img className="pfp" src="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ" width="8"
                          alt="Profile Picture"/>
@@ -43,7 +44,6 @@ export function Homepage() {
                 </div>
                 <Credits/>
             </div>
-            </body>
         </>
     )
 }
