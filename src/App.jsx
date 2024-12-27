@@ -1,21 +1,27 @@
-import {Route, BrowserRouter as Router, Routes} from "react-router-dom"
+import {Route, BrowserRouter as Router, Routes, useLocation} from "react-router-dom"
 import {Homepage} from "./pages/Homepage.jsx";
 import "./App.css";
 import {Work} from "./pages/Work.jsx";
+import {AnimatePresence} from "motion/react";
 
-console.log("Portfolio site loaded");
+function AnimatedRoutes() {
+    const location = useLocation();
+    return(
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+                <Route path="*" element={<Homepage/>}/>
+                <Route path="/" element={<Homepage/>}/>
+                <Route path={"/Work"} element={<Work/>}/>
+            </Routes>
+        </AnimatePresence>
+    )
+}
 
 export function App() {
   return (
       <Router>
-          <Routes>
-              <Route>
-                  <Route path="*" element={<Homepage/>}/>
-                  <Route path="/" element={<Homepage/>}/>
-                  <Route path={"/Work"} element={<Work/>}/>
-                </Route>
-            </Routes>
-        </Router>
+          <AnimatedRoutes/>
+      </Router>
   )
 }
 

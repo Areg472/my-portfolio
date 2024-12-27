@@ -4,6 +4,7 @@ import {Credits} from "../components/Credits.jsx";
 import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import {Navbar} from "../components/Navbar.jsx";
+import {motion} from "motion/react";
 
 
 export function Homepage() {
@@ -16,11 +17,40 @@ export function Homepage() {
                 image="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ"
             />
             <Navbar/>
+            <motion.div initial={{rotate: 150, scale: 0, opacity: 0}}
+                        transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
+                        animate={{rotate: 0, scale: 1, opacity: 1}}
+                        exit={{rotate: -150, scale: 0, opacity: 0}}>
             <div className="container">
                 <h1 className="text-3xl md:text-5xl">Aregtheeditor</h1>
                 <div className="card">
-                    <img className="pfp" src="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ" width="8"
-                         alt="Profile Picture"/>
+                    <div className="flex justify-center items-center mb-4">
+                        <motion.div initial={{scale: 0.2, opacity: 0}}
+                                    transition={{
+                                        duration: 2,
+                                        repeatType: "reverse",
+                                        type: "spring",
+                                        bounce: 1,
+                                        bounceStiffness: 360,
+                                        bounceDamping: 5,
+                                        repeat: Infinity,
+                                        repeatDelay: 3
+                                    }}
+                                    animate={{scale: 1, opacity: 1}}>
+                                <motion.div initial={{rotate: 0}}
+                                            transition={{
+                                                duration: 7,
+                                                repeatType: "loop",
+                                                ease: "linear",
+                                                repeat: Infinity
+                                            }}
+                                            animate={{rotate: 360}}>
+                                    <img className="w-16 h-16 rounded-full"
+                                         src="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa"
+                                         alt="Profile Picture"/>
+                                </motion.div>
+                        </motion.div>
+                    </div>
                     <AnimatedText/>
                     <SocialIcons/>
                     <div className="videos">
@@ -44,6 +74,7 @@ export function Homepage() {
                 </div>
                 <Credits/>
             </div>
+            </motion.div>
         </>
     )
 }
