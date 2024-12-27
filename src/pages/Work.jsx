@@ -1,5 +1,4 @@
 import MetaTags from "../components/MetaTags.jsx";
-import {Navbar} from "../components/Navbar.jsx";
 import {Credits} from "../components/Credits.jsx";
 import {motion} from "motion/react";
 
@@ -12,7 +11,6 @@ export function Work() {
                 name="Aregtheeditor"
                 image="https://utfs.io/f/thKihuQxhYcPnE4P0fJqSrG7F3ilObYXHjDPRupZ6a15IhtQ"
             />
-            <Navbar/>
             <motion.div initial={{rotate: 150, scale: 0, opacity: 0}}
                         transition={{duration: 0.75, type: "spring", bounce: 0.3}}
                         animate={{rotate: 0, scale: 1, opacity: 1}}
