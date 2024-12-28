@@ -29,6 +29,7 @@ export function Homepage() {
                                         repeatType: "reverse",
                                         type: "spring",
                                         bounce: 1,
+                                        delay: 1,
                                         bounceStiffness: 360,
                                         bounceDamping: 5,
                                         repeat: Infinity,
@@ -40,7 +41,8 @@ export function Homepage() {
                                                 duration: 7,
                                                 repeatType: "loop",
                                                 ease: "linear",
-                                                repeat: Infinity
+                                                repeat: Infinity,
+                                                delay: 1
                                             }}
                                             animate={{rotate: 360}}>
                                     <img className="w-16 h-16 rounded-full"
