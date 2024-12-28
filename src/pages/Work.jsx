@@ -30,8 +30,8 @@ export function Work() {
                     </motion.div>
                     <motion.div whileHover={{scale: 1.1}}>
                         <div
-                            className="border-2 border-dotted border-amber-300 rounded-md w-72 md:w-96 h-[291px] md:h-48 mt-10">
-                            <h2 className="mt-4">Codedex hack 🎄 2023</h2>
+                            className="border-2 border-dotted border-amber-300 rounded-md w-72 md:w-96 h-[250px] md:h-48 mt-10">
+                            <h2 className="mt-4">Codedex hack🎄 2023</h2>
 
                             <p>The Codedex New Year hackathon website</p>
                             <a href={"https://new-year-hackathon.aregus.me"} target="_blank">
