@@ -21,7 +21,7 @@ export function Work() {
                             className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-56 mt-10">
                             <h2 className="mt-4 font-boldExo">Ocean+</h2>
 
-                            <p>The ultimate Vyond and GoAnimate streaming platform</p>
+                            <p>The ultimate Vyond and GoAnimate streaming platform!</p>
                             <a href={"https://oceanbluestream.com"} target="_blank">
                                 <button className={"text-2xl bg-[#ffd846] w-44 h-10 rounded-md mt-10 text-black"}>Click here!
                                 </button>
@@ -35,7 +35,7 @@ export function Work() {
                                                                                      src="https://utfs.io/f/thKihuQxhYcPwsR0oOfEF1bloKXeA0d3pP7RDCmGxkgNhTjM"
                                                                                      alt="tree"/></h2>
 
-                            <p>The Codedex New Year hackathon website</p>
+                            <p>The Codedex New Year hackathon<br/>website!</p>
                             <a href={"https://new-year-hackathon.aregus.me"} target="_blank">
                                 <button className={"text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10"}>Click
                                     here!
