@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'cool': ['Exo2']
+    }
   },
   plugins: [],
 }

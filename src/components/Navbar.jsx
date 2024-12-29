@@ -8,8 +8,10 @@ export function Navbar() {
                 <motion.div initial={{y: -140}}
                             transition={{type: "spring", duration: 1.5, bounce: 0.55, delay: 1}} animate={{y: 0}}>
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                        <Link to={"/"}>
-                            <p className="text-2xl font-bold text-white">Home</p>
+                        <Link to={"/Home"}>
+                            <button className="bg-[#ffd846] w-24 font-cool h-8 rounded-md text-neutral-900 text-xl">
+                                Home
+                            </button>
                         </Link>
                     </motion.div>
                 </motion.div>
@@ -17,7 +19,9 @@ export function Navbar() {
                             transition={{type: "spring", duration: 2, bounce: 0.6, delay: 1}} animate={{y: 0}}>
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         <Link to={"/Work"}>
-                            <p className="text-2xl font-bold text-white">Work</p>
+                            <button className="bg-[#ffd846] w-24 font-cool h-8 rounded-md text-neutral-900 text-xl">
+                                Work
+                            </button>
                         </Link>
                     </motion.div>
                 </motion.div>
