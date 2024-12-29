@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'cool': ['Exo2']
+      'cool': ['Exo2'],
+      'emoji': ['WindowsEmoji'],
+      'boldExo': ['Exo2Bold'],
+      'regularExo': ['Exo2Regular'],
+      'bolditalicExo': ['Exo2BoldItalic'],
     }
   },
   plugins: [],

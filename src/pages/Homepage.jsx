@@ -19,8 +19,8 @@ export function Homepage() {
                         transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
                         animate={{rotate: 0, scale: 1, opacity: 1}}
                         exit={{rotate: -150, scale: 0, opacity: 0}}>
-            <div className="container">
-                <h1 className="text-3xl md:text-5xl">Aregtheeditor</h1>
+            <div className="container font-regularExo">
+                <h1 className="text-3xl md:text-5xl font-bolditalicExo">Aregtheeditor</h1>
                 <div className="card">
                     <div className="flex justify-center items-center mb-4">
                         <motion.div initial={{scale: 0.2, opacity: 0}}
