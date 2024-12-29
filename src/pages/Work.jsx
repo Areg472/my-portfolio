@@ -31,11 +31,14 @@ export function Work() {
                     <motion.div whileHover={{scale: 1.1}}>
                         <div
                             className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-[202px] mt-10">
-                            <h2 className="mt-4 font-boldExo">Codedex hack<span className="font-emoji">🎄</span><span className="font-boldExo"> 2023</span></h2>
+                            <h2 className="mt-4 font-boldExo">Codedex hack 2024 <img className="size-5 mb-1 inline"
+                                                                                     src="https://utfs.io/f/thKihuQxhYcPwsR0oOfEF1bloKXeA0d3pP7RDCmGxkgNhTjM"
+                                                                                     alt="tree"/></h2>
 
                             <p>The Codedex New Year hackathon website</p>
                             <a href={"https://new-year-hackathon.aregus.me"} target="_blank">
-                                <button className={"text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10"}>Click here!
+                                <button className={"text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10"}>Click
+                                    here!
                                 </button>
                             </a>
                         </div>
