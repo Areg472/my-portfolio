@@ -4,8 +4,11 @@ import { Credits } from "../components/Credits.jsx";
 import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 export function Homepage() {
+  const [hmm, useHmm] = useState(null);
+
   return (
     <>
       <MetaTags
@@ -21,9 +24,7 @@ export function Homepage() {
         exit={{ rotate: -150, scale: 0, opacity: 0 }}
       >
         <div className="container font-regularExo">
-          <h1 className="text-3xl md:text-5xl font-bolditalicExo">
-            Aregtheeditor
-          </h1>
+          <h1 className="text-3xl md:text-5xl font-cool">Aregtheeditor</h1>
           <div className="card">
             <div className="flex justify-center items-center mb-4">
               <motion.div
@@ -60,34 +61,46 @@ export function Homepage() {
                 </motion.div>
               </motion.div>
             </div>
-            <AnimatedText />
-            <SocialIcons />
+            <div className="h-8">
+              {hmm ? (
+                <motion.h2
+                  className="text-l text-center font-bold-exo"
+                  key={hmm}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  {(hmm === 1 && "Youtube") ||
+                    (hmm === 2 && "Reddit") ||
+                    (hmm === 3 && "X") ||
+                    (hmm === 4 && "Bluesky") ||
+                    (hmm === 5 && "Discord") ||
+                    (hmm === 6 && "Github")}
+                </motion.h2>
+              ) : (
+                <AnimatedText />
+              )}
+            </div>
+            <SocialIcons useHmm={useHmm} />
             <div className="videos">
               <div className="video">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcP5uuhvrey9QMVKuYNiPmI2vUEWw8p31tdckfX"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
+                <video controls>
+                  <source
+                    src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcP5uuhvrey9QMVKuYNiPmI2vUEWw8p31tdckfX"
+                    type="video/mp4"
+                  />
+                </video>
                 <p>Ocean+ trailer</p>
               </div>
               <div className="video secondvid">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPd668IfdaseL9gSckKrUp5Etw6zQqDBM721Zj"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-                <p>Jane ruins the ship trip/grounded</p>
+                <video controls>
+                  <source
+                    src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPd668IfdaseL9gSckKrUp5Etw6zQqDBM721Zj"
+                    type="video/mp4"
+                  />
+                </video>
+                <p>Doing the Hackathon</p>
               </div>
             </div>
           </div>

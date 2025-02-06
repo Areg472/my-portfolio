@@ -15,7 +15,7 @@ export default function AnimatedText() {
   }, []);
 
   return (
-    <h2 className="text-l font-bold text-center mt-6">
+    <h2 className="text-l text-center mt-6">
       <AnimatePresence mode="wait">
         <motion.span
           key={index}
@@ -23,7 +23,7 @@ export default function AnimatedText() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="inline-block"
+          className="inline-block font-bold-exo"
         >
           {texts[index]}
         </motion.span>
