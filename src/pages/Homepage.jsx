@@ -92,7 +92,7 @@ export function Homepage() {
                     type="video/mp4"
                   />
                 </video>
-                <p>Ocean+ trailer</p>
+                <p className="font-regular-exo">Ocean+ trailer</p>
               </div>
               <div className="video secondvid">
                 <video controls>
@@ -101,7 +101,7 @@ export function Homepage() {
                     type="video/mp4"
                   />
                 </video>
-                <p>Doing the Hackathon</p>
+                <p className="font-regular-exo">Doing the Hackathon</p>
               </div>
             </div>
           </div>
