@@ -22,7 +22,7 @@ function MetaTags({ title = "", description = "", name = "" }) {
         property="og:image:secure_url"
         content="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPpv4cXqYtq7IoNXS4kB8sK2GLTJa5YUnemuxw"
       />
-      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="200" />
       <meta property="og:image:alt" content={`Image of ${title} site`} />
       {/* Twitter tags */}
