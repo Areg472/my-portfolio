@@ -15,7 +15,7 @@ export function Homepage() {
         title={"Aregtheeditor"}
         description="Areg's small little corner in the internet :3"
         name="Aregtheeditor"
-        image="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa"
+        image="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPpv4cXqYtq7IoNXS4kB8sK2GLTJa5YUnemuxw"
       />
       <motion.div
         initial={{ rotate: 150, scale: 0, opacity: 0 }}
