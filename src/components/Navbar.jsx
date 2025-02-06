@@ -12,7 +12,7 @@ export function Navbar() {
         >
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Link to={"/Home"}>
-              <button className="bg-[#ffd846] w-24 font-cool h-8 rounded-md text-neutral-900 text-xl">
+              <button className="bg-[#ffd846] w-24 font-cool h-8 rounded-md text-neutral-900 text-xl cursor-pointer">
                 Home
               </button>
             </Link>
@@ -27,7 +27,7 @@ export function Navbar() {
         >
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Link to={"/Work"}>
-              <button className="bg-[#ffd846] w-24 font-cool h-8 rounded-md text-neutral-900 text-xl">
+              <button className="bg-[#ffd846] w-24 font-cool h-8 rounded-md text-neutral-900 text-xl cursor-pointer">
                 Work
               </button>
             </Link>

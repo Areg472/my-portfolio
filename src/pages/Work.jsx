@@ -19,7 +19,7 @@ export function Work() {
       >
         <div className="container font-regularExo">
           <motion.div whileHover={{ scale: 1.1 }}>
-            <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-56 mt-10">
+            <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-56 mt-10 p-4">
               <h2 className="mt-4 font-boldExo">Ocean+</h2>
 
               <p>The ultimate Vyond and GoAnimate streaming platform!</p>
@@ -35,7 +35,7 @@ export function Work() {
             </div>
           </motion.div>
           <motion.div whileHover={{ scale: 1.1 }}>
-            <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-[224px] mt-10">
+            <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-56 mt-10 p-4">
               <h2 className="mt-4 font-boldExo">
                 Codedex hack 2024{" "}
                 <img
