@@ -9,7 +9,6 @@ export function Work() {
         title={"Aregtheeditor"}
         description="My smol OwO work!"
         name="Aregtheeditor"
-        image="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPpv4cXqYtq7IoNXS4kB8sK2GLTJa5YUnemuxw"
       />
       <motion.div
         initial={{ rotate: 150, scale: 0, opacity: 0 }}
