@@ -1,6 +1,6 @@
 import "./SocialIcons.css";
-import { FaReddit, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
-import { FaBluesky, FaDiscord } from "react-icons/fa6";
+import { FaReddit, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaBluesky, FaDiscord, FaXTwitter } from "react-icons/fa6";
 
 // eslint-disable-next-line react/prop-types
 export function SocialIcons({ useHmm }) {
@@ -21,7 +21,7 @@ export function SocialIcons({ useHmm }) {
           <FaReddit onMouseEnter={() => HandleHover(2)} />
         </a>
         <a href="https://x.com/Aregtheeditor" target="_blank">
-          <FaTwitter onMouseEnter={() => HandleHover(3)} />
+          <FaXTwitter onMouseEnter={() => HandleHover(3)} />
         </a>
         <a href="https://bsky.app/profile/aregus.me" target="_blank">
           <FaBluesky onMouseEnter={() => HandleHover(4)} />
