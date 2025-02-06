@@ -19,13 +19,15 @@ export function Work() {
         <div className="container font-regularExo">
           <motion.div whileHover={{ scale: 1.1 }}>
             <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-56 mt-10 p-4">
-              <h2 className="mt-4 font-boldExo">Ocean+</h2>
+              <h2 className="mt-4 font-bold-exo">Ocean+</h2>
 
-              <p>The ultimate Vyond and GoAnimate streaming platform!</p>
+              <p className="font-regular-exo">
+                The ultimate Vyond and GoAnimate streaming platform!
+              </p>
               <a href={"https://oceanbluestream.com"} target="_blank">
                 <button
                   className={
-                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md mt-10 text-black"
+                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md mt-10 text-black font-bold-exo"
                   }
                 >
                   Click here!
@@ -35,7 +37,7 @@ export function Work() {
           </motion.div>
           <motion.div whileHover={{ scale: 1.1 }}>
             <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 h-[250px] md:h-56 mt-10 p-4">
-              <h2 className="mt-4 font-boldExo">
+              <h2 className="mt-4 font-bold-exo">
                 Codedex hack 2024{" "}
                 <img
                   className="size-5 mb-1 inline"
@@ -44,7 +46,7 @@ export function Work() {
                 />
               </h2>
 
-              <p>
+              <p className="font-regular-exo">
                 The Codedex New Year hackathon
                 <br />
                 website!
@@ -52,7 +54,7 @@ export function Work() {
               <a href={"https://new-year-hackathon.aregus.me"} target="_blank">
                 <button
                   className={
-                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10"
+                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10 font-bold-exo"
                   }
                 >
                   Click here!

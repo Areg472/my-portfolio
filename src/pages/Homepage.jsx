@@ -23,7 +23,9 @@ export function Homepage() {
         exit={{ rotate: -150, scale: 0, opacity: 0 }}
       >
         <div className="container font-regularExo">
-          <h1 className="text-3xl md:text-5xl font-cool">Aregtheeditor</h1>
+          <h1 className="text-3xl md:text-5xl font-bolditalic-exo">
+            Aregtheeditor
+          </h1>
           <div className="card">
             <div className="flex justify-center items-center mb-4">
               <motion.div
