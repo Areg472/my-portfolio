@@ -27,7 +27,7 @@ export function Work() {
               <a href={"https://oceanbluestream.com"} target="_blank">
                 <button
                   className={
-                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md mt-10 text-black font-bold-exo"
+                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md mt-10 text-black font-bold-exo cursor-pointer"
                   }
                 >
                   Click here!
@@ -54,7 +54,7 @@ export function Work() {
               <a href={"https://new-year-hackathon.aregus.me"} target="_blank">
                 <button
                   className={
-                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10 font-bold-exo"
+                    "text-2xl bg-[#ffd846] w-44 h-10 rounded-md text-black mt-10 font-bold-exo cursor-pointer"
                   }
                 >
                   Click here!
