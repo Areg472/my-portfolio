@@ -4,7 +4,7 @@ export function Credits() {
   return (
     <>
       <a className="hmm" href="https://github.com/Pirkisek" target="_blank">
-        <p className="credit">Some made by @pirkisek</p>
+        <p className="credit">Some code by @pirkisek</p>
       </a>
     </>
   );

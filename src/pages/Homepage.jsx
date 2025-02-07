@@ -5,6 +5,7 @@ import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { BrowserView, MobileView } from "react-device-detect";
 
 export function Homepage() {
   const [hmm, useHmm] = useState(null);
@@ -105,9 +106,9 @@ export function Homepage() {
                       type="video/mp4"
                     />
                   </video>
-                  <p className="font-regular-exo visible lg:invisible mt-4">
-                    Ocean+ trailer
-                  </p>
+                  <MobileView>
+                    <p className="font-regular-exo mt-4">Ocean+ trailer</p>
+                  </MobileView>
                 </div>
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
                   <video controls onMouseEnter={() => HandleHoverVid(8)}>
@@ -116,9 +117,9 @@ export function Homepage() {
                       type="video/mp4"
                     />
                   </video>
-                  <p className="font-regular-exo visible lg:invisible mt-4">
-                    Doing the Hackathon
-                  </p>
+                  <MobileView>
+                    <p className="font-regular-exo mt-4">Doing the Hackathon</p>
+                  </MobileView>
                 </div>
               </div>
             </div>
