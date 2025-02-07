@@ -5,7 +5,7 @@ import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
 import { useState } from "react";
-import { BrowserView, MobileView } from "react-device-detect";
+import { MobileView } from "react-device-detect";
 
 export function Homepage() {
   const [hmm, useHmm] = useState(null);
