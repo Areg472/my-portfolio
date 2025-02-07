@@ -9,6 +9,10 @@ import { useState } from "react";
 export function Homepage() {
   const [hmm, useHmm] = useState(null);
 
+  function HandleHoverVid(value) {
+    useHmm(value);
+  }
+
   return (
     <>
       <MetaTags
@@ -58,6 +62,8 @@ export function Homepage() {
                     className="w-16 h-16 rounded-full"
                     src="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa"
                     alt="Profile Picture"
+                    onMouseEnter={() => HandleHoverVid(9)}
+                    onMouseLeave={() => HandleHoverVid(null)}
                   />
                 </motion.div>
               </motion.div>
@@ -77,31 +83,43 @@ export function Homepage() {
                     (hmm === 3 && "X") ||
                     (hmm === 4 && "Bluesky") ||
                     (hmm === 5 && "Discord") ||
-                    (hmm === 6 && "Github")}
+                    (hmm === 6 && "Github") ||
+                    (hmm === 7 && "Ocean+ Trailer") ||
+                    (hmm === 8 && "Doing the Hackathon") ||
+                    (hmm === 9 && "UwU")}
                 </motion.h2>
               ) : (
                 <AnimatedText />
               )}
             </div>
             <SocialIcons useHmm={useHmm} />
-            <div className="videos">
-              <div className="video">
-                <video controls>
-                  <source
-                    src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcP5uuhvrey9QMVKuYNiPmI2vUEWw8p31tdckfX"
-                    type="video/mp4"
-                  />
-                </video>
-                <p className="font-regular-exo">Ocean+ trailer</p>
-              </div>
-              <div className="video secondvid">
-                <video controls>
-                  <source
-                    src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPd668IfdaseL9gSckKrUp5Etw6zQqDBM721Zj"
-                    type="video/mp4"
-                  />
-                </video>
-                <p className="font-regular-exo">Doing the Hackathon</p>
+            <div className="flex flex-col items-center justify-center ml-[9%] md:ml-[7%]">
+              <div
+                onMouseLeave={() => HandleHoverVid(null)}
+                className="flex flex-col md:flex-row gap-4"
+              >
+                <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
+                  <video controls onMouseEnter={() => HandleHoverVid(7)}>
+                    <source
+                      src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcP5uuhvrey9QMVKuYNiPmI2vUEWw8p31tdckfX"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <p className="font-regular-exo visible lg:invisible mt-4">
+                    Ocean+ trailer
+                  </p>
+                </div>
+                <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
+                  <video controls onMouseEnter={() => HandleHoverVid(8)}>
+                    <source
+                      src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPd668IfdaseL9gSckKrUp5Etw6zQqDBM721Zj"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <p className="font-regular-exo visible lg:invisible mt-4">
+                    Doing the Hackathon
+                  </p>
+                </div>
               </div>
             </div>
           </div>
