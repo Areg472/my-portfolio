@@ -5,7 +5,7 @@ import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
 import { useState } from "react";
-import { MobileView } from "react-device-detect";
+import { MobileView, BrowserView } from "react-device-detect";
 
 export function Homepage() {
   const [hmm, useHmm] = useState(null);
@@ -70,28 +70,33 @@ export function Homepage() {
               </motion.div>
             </div>
             <div className="h-8">
-              {hmm ? (
-                <motion.h2
-                  className="text-l text-center font-bold-exo"
-                  key={hmm}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                >
-                  {(hmm === 1 && "Youtube") ||
-                    (hmm === 2 && "Reddit") ||
-                    (hmm === 3 && "X") ||
-                    (hmm === 4 && "Bluesky") ||
-                    (hmm === 5 && "Discord") ||
-                    (hmm === 6 && "Github") ||
-                    (hmm === 7 && "Ocean+ Trailer") ||
-                    (hmm === 8 && "Doing the Hackathon") ||
-                    (hmm === 9 && "UwU")}
-                </motion.h2>
-              ) : (
+              <BrowserView>
+                {hmm ? (
+                  <motion.h2
+                    className="text-l text-center font-bold-exo"
+                    key={hmm}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
+                    {(hmm === 1 && "Youtube") ||
+                      (hmm === 2 && "Reddit") ||
+                      (hmm === 3 && "X") ||
+                      (hmm === 4 && "Bluesky") ||
+                      (hmm === 5 && "Discord") ||
+                      (hmm === 6 && "Github") ||
+                      (hmm === 7 && "Ocean+ Trailer") ||
+                      (hmm === 8 && "Doing the Hackathon") ||
+                      (hmm === 9 && "UwU")}
+                  </motion.h2>
+                ) : (
+                  <AnimatedText />
+                )}
+              </BrowserView>
+              <MobileView>
                 <AnimatedText />
-              )}
+              </MobileView>
             </div>
             <SocialIcons useHmm={useHmm} />
             <div className="flex flex-col items-center justify-center ml-[9%] md:ml-[7%]">
