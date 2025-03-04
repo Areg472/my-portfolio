@@ -64,7 +64,7 @@ export function Homepage() {
                     className="w-16 h-16 rounded-full"
                     src="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa"
                     alt="Profile Picture"
-                    onMouseEnter={() => HandleHoverVid(9)}
+                    onMouseEnter={() => HandleHoverVid(10)}
                     onMouseLeave={() => HandleHoverVid(null)}
                   />
                 </motion.div>
@@ -107,7 +107,7 @@ export function Homepage() {
                 className="flex flex-col md:flex-row gap-4"
               >
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
-                  <video controls onMouseEnter={() => HandleHoverVid(7)}>
+                  <video controls onMouseEnter={() => HandleHoverVid(8)}>
                     <source
                       src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcP5uuhvrey9QMVKuYNiPmI2vUEWw8p31tdckfX"
                       type="video/mp4"
@@ -118,7 +118,7 @@ export function Homepage() {
                   </MobileView>
                 </div>
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
-                  <video controls onMouseEnter={() => HandleHoverVid(8)}>
+                  <video controls onMouseEnter={() => HandleHoverVid(9)}>
                     <source
                       src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPd668IfdaseL9gSckKrUp5Etw6zQqDBM721Zj"
                       type="video/mp4"
