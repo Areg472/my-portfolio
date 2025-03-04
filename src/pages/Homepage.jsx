@@ -87,10 +87,10 @@ export function Homepage() {
                       (hmm === 4 && "Bluesky") ||
                       (hmm === 5 && "Discord") ||
                       (hmm === 6 && "Github") ||
-                      (hmm === 7 && "Ocean+ Trailer") ||
-                      (hmm === 8 && "Doing the Hackathon") ||
-                      (hmm === 9 && "UwU") ||
-                      (hmm === 10 && "Matrix")}
+                      (hmm === 7 && "Matrix") ||
+                      (hmm === 8 && "Ocean+ Trailer") ||
+                      (hmm === 9 && "Doing the Hackathon") ||
+                      (hmm === 10 && "UwU")}
                   </motion.h2>
                 ) : (
                   <AnimatedText />

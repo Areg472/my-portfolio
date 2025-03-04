@@ -34,7 +34,7 @@ export function SocialIcons({ useHmm }) {
           <FaGithub onMouseEnter={() => HandleHover(6)} />
         </Icon>
         <Icon link="https://matrix.to/#/@aregus:tchncs.de">
-          <TbBrandMatrix onMouseEnter={() => HandleHover(10)} />
+          <TbBrandMatrix onMouseEnter={() => HandleHover(7)} />
         </Icon>
       </div>
     </div>
