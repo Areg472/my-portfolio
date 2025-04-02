@@ -1,5 +1,5 @@
 import "./SocialIcons.css";
-import { FaReddit, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaYoutube, FaGithub } from "react-icons/fa";
 import { FaBluesky, FaDiscord, FaXTwitter } from "react-icons/fa6";
 import { TbBrandMatrix } from "react-icons/tb";
 
@@ -17,9 +17,6 @@ export function SocialIcons({ useHmm }) {
       >
         <Icon link="https://www.youtube.com/@aregthevideoeditor">
           <FaYoutube onMouseEnter={() => HandleHover(1)} />
-        </Icon>
-        <Icon link={"https://www.reddit.com/user/SUPERAREG/"}>
-          <FaReddit onMouseEnter={() => HandleHover(2)} />
         </Icon>
         <Icon link="https://x.com/Aregtheeditor">
           <FaXTwitter onMouseEnter={() => HandleHover(3)} />

@@ -82,7 +82,6 @@ export function Homepage() {
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   >
                     {(hmm === 1 && "Youtube") ||
-                      (hmm === 2 && "Reddit") ||
                       (hmm === 3 && "X") ||
                       (hmm === 4 && "Bluesky") ||
                       (hmm === 5 && "Discord") ||
