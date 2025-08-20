@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-const texts = ["Developer", "Video Editor", "Youtuber"];
+const texts = ["Developer", "Video Editor", "A Duck"];
 
 export default function AnimatedText() {
   const [index, setIndex] = useState(0);
