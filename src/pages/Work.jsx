@@ -6,11 +6,7 @@ import WorkCard from "../components/WorkCard.jsx";
 export function Work() {
   return (
     <>
-      <MetaTags
-        title={"Aregtheeditor"}
-        description="My smol OwO work!"
-        name="Aregtheeditor"
-      />
+      <MetaTags title={"Areg"} description="My smol OwO work!" name="Areg" />
       <motion.div
         initial={{ rotate: 150, scale: 0, opacity: 0 }}
         transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}

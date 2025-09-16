@@ -13,14 +13,13 @@ export function Homepage() {
   function HandleHoverVid(value) {
     useHmm(value);
   }
-  //https://link.brawlstars.com/invite/band/en?tag=2CGUYCGUY&token=k2mgcfjf
 
   return (
     <>
       <MetaTags
         title={"Areg"}
         description="Areg's small little corner in the internet :3"
-        name="Aregtheeditor"
+        name="Areg"
       />
       <motion.div
         initial={{ rotate: 150, scale: 0, opacity: 0 }}
