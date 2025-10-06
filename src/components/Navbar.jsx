@@ -10,7 +10,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <div className="w-full pt-8 pb-4 bg-[#1d1e25] flex flex-col md:flex-row justify-center md:space-x-10 space-y-4 md:space-y-0 items-center transform-gpu">
+    <div className="w-full pt-6 pb-6 bg-[#1d1e25] flex flex-col md:flex-row justify-center md:space-x-10 space-y-4 md:space-y-0 items-center transform-gpu">
       <motion.div
         initial={{ y: -140 }}
         animate={{ y: hasAnimated ? 0 : -10 }}
