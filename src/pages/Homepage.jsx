@@ -83,6 +83,7 @@ export function Homepage() {
                       (hmm === 4 && "Bluesky") ||
                       (hmm === 5 && "Discord") ||
                       (hmm === 6 && "Github") ||
+                      (hmm === 7 && "Contact") ||
                       (hmm === 8 && "Ocean+ Trailer") ||
                       (hmm === 9 && "Doing the Hackathon") ||
                       (hmm === 10 && ":3")}

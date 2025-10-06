@@ -1,6 +1,6 @@
 import "./SocialIcons.css";
 import { FaYoutube, FaGithub } from "react-icons/fa";
-import { FaBluesky, FaDiscord, FaXTwitter } from "react-icons/fa6";
+import { FaBluesky, FaDiscord, FaXTwitter, FaEnvelope } from "react-icons/fa6";
 
 // eslint-disable-next-line react/prop-types
 export function SocialIcons({ useHmm }) {
@@ -28,6 +28,9 @@ export function SocialIcons({ useHmm }) {
         </Icon>
         <Icon link="https://github.com/Areg472">
           <FaGithub onMouseEnter={() => HandleHover(6)} />
+        </Icon>
+        <Icon link="https://fluffy-tomato-37d.notion.site/2847441671d681c49a00ca56d5150108?pvs=105">
+          <FaEnvelope onMouseEnter={() => HandleHover(7)} />
         </Icon>
       </div>
     </div>
