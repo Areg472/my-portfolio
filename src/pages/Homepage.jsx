@@ -105,7 +105,7 @@ export function Homepage() {
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
                   <video controls onMouseEnter={() => HandleHoverVid(8)}>
                     <source
-                      src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcP5uuhvrey9QMVKuYNiPmI2vUEWw8p31tdckfX"
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/Ocean%2B%20full%20trailer.mp4"
                       type="video/mp4"
                     />
                   </video>
@@ -116,7 +116,7 @@ export function Homepage() {
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
                   <video controls onMouseEnter={() => HandleHoverVid(9)}>
                     <source
-                      src="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPd668IfdaseL9gSckKrUp5Etw6zQqDBM721Zj"
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/Doing%20the%20hackathon!.mp4"
                       type="video/mp4"
                     />
                   </video>
