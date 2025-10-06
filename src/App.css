@@ -30,4 +30,5 @@
   isolation: isolate;
   transform-style: preserve-3d;
   pointer-events: auto;
+  padding-top: 80px; /* Add padding to account for fixed navbar */
 }
