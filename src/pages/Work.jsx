@@ -8,7 +8,6 @@ export function Work() {
     <>
       <MetaTags title={"Areg"} description="My smol OwO work!" name="Areg" />
       <motion.div
-        className="pt-20 md:pt-24"
         initial={{ rotate: 150, scale: 0, opacity: 0 }}
         transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
         animate={{ rotate: 0, scale: 1, opacity: 1 }}
