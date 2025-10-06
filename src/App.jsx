@@ -10,39 +10,40 @@ import { Work } from "./pages/Work.jsx";
 import { AnimatePresence } from "motion/react";
 import { Navbar } from "./components/Navbar.jsx";
 import PropTypes from "prop-types";
+import React from "react";
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
 function Layout({ children }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
+
+const MemoizedNavbar = React.memo(Navbar);
 
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    <Layout>
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="*" element={<Homepage />} />
-          <Route path="/" element={<Homepage />} />
-          <Route path={"/Work"} element={<Work />} />
-        </Routes>
-      </AnimatePresence>
-    </Layout>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="*" element={<Homepage />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path={"/Work"} element={<Work />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 
 export function App() {
   return (
     <Router>
-      <AnimatedRoutes />
+      <div className="navbar-wrapper">
+        <MemoizedNavbar />
+      </div>
+      <div className="page-wrapper">
+        <AnimatedRoutes />
+      </div>
     </Router>
   );
 }

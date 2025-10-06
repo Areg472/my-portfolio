@@ -1,6 +1,5 @@
 import MetaTags from "../components/MetaTags.jsx";
 import { SocialIcons } from "../components/SocialIcons.jsx";
-import { Credits } from "../components/Credits.jsx";
 import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
@@ -22,13 +21,16 @@ export function Homepage() {
         name="Areg"
       />
       <motion.div
+        className="pt-28 md:pt-24"
         initial={{ rotate: 150, scale: 0, opacity: 0 }}
         transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
         animate={{ rotate: 0, scale: 1, opacity: 1 }}
         exit={{ rotate: -150, scale: 0, opacity: 0 }}
       >
         <div className="container font-regularExo">
-          <h1 className="text-3xl md:text-5xl font-bolditalic-exo">Areg</h1>
+          <h1 className="font-thin mb-4 text-3xl md:text-5xl font-bolditalic-exo">
+            Areg
+          </h1>
           <div className="card">
             <div className="flex justify-center items-center mb-4">
               <motion.div
@@ -71,7 +73,7 @@ export function Homepage() {
               <BrowserView>
                 {hmm ? (
                   <motion.h2
-                    className="text-l text-center font-bold-exo"
+                    className="text-l text-center font-bold-exo font-"
                     key={hmm}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -127,7 +129,7 @@ export function Homepage() {
               </div>
             </div>
           </div>
-          <Credits />
+          {/*<Credits />*/}
         </div>
       </motion.div>
     </>
