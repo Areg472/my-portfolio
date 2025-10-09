@@ -83,11 +83,11 @@ export function Homepage() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   >
-                    {(hmm === 1 && "Youtube") ||
+                    {(hmm === 1 && "YouTube") ||
                       (hmm === 3 && "X") ||
-                      (hmm === 4 && "Bluesky") ||
+                      (hmm === 4 && "BlueSky") ||
                       (hmm === 5 && "Discord") ||
-                      (hmm === 6 && "Github") ||
+                      (hmm === 6 && "GitHub") ||
                       (hmm === 7 && "Contact") ||
                       (hmm === 8 && "Ocean+ Trailer") ||
                       (hmm === 9 && "Doing the Hackathon") ||
