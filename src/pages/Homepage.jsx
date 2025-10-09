@@ -30,6 +30,10 @@ export function Homepage() {
           <h1 className="font-thin mb-4 text-3xl md:text-5xl font-bolditalic-exo">
             Areg
           </h1>
+          <h4 className="font-thin mt-3 text-md md:text-xl font-regular-exo">
+            A smol web dev who likes open source stuff, and programming. <br />
+            Computers are cool :)
+          </h4>
           <div className="card">
             <div className="flex justify-center items-center mb-4">
               <motion.div
@@ -104,7 +108,11 @@ export function Homepage() {
                 className="flex flex-col md:flex-row gap-4"
               >
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
-                  <video controls onMouseEnter={() => HandleHoverVid(8)}>
+                  <video
+                    controls
+                    onMouseEnter={() => HandleHoverVid(8)}
+                    poster="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-34-24%20Areg.png"
+                  >
                     <source
                       src="https://file.garden/Zp_ExamEPnCWgsNn/Ocean%2B%20full%20trailer.mp4"
                       type="video/mp4"
@@ -115,7 +123,11 @@ export function Homepage() {
                   </MobileView>
                 </div>
                 <div className="content-center items-center justify-center w-[90%] md:w-[45%]">
-                  <video controls onMouseEnter={() => HandleHoverVid(9)}>
+                  <video
+                    controls
+                    onMouseEnter={() => HandleHoverVid(9)}
+                    poster="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-29-43%20Areg.png"
+                  >
                     <source
                       src="https://file.garden/Zp_ExamEPnCWgsNn/Doing%20the%20hackathon!.mp4"
                       type="video/mp4"

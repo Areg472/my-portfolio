@@ -1,5 +1,5 @@
 import MetaTags from "../components/MetaTags.jsx";
-import { Credits } from "../components/Credits.jsx";
+/*import { Credits } from "../components/Credits.jsx";*/
 import { motion } from "motion/react";
 import WorkCard from "../components/WorkCard.jsx";
 
@@ -18,16 +18,18 @@ export function Work() {
             title="Ocean+"
             description="The ultimate Vyond and GoAnimate streaming platform!"
             link="https://oceanbluestream.com/"
+            image_alt="Ocean+ logo"
+            image_link="https://file.garden/Zp_ExamEPnCWgsNn/logo.jpg"
           />
           <WorkCard
-            title="Codedex hack 2024"
-            description="The Codedex New Year Hackathon 🎄!"
+            title="Codédex Winter Hackathon 2024"
+            description="A 2 day hackathon run by Codédex in December :D"
             link="https://new-year-hackathon.aregus.me/"
+            image_link="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-42-40%20Areg%20travels.png"
+            image_alt="A screenshot of my hackathon project website"
           />
         </div>
-        <div className="mt-12">
-          <Credits />
-        </div>
+        {/*<div className="mt-12"><Credits /></div>*/}
       </motion.div>
     </>
   );
