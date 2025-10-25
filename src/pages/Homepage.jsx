@@ -22,23 +22,6 @@ export function Homepage() {
         `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
       ];
 
-      try {
-        const res = await fetch(apiUrl);
-        console.log("Direct fetch response status:", res.status);
-        if (!mounted) return;
-        if (res.ok) {
-          const data = await res.json();
-          console.log("Fetched data:", data);
-          console.log("Members array:", data.members);
-          const list = Array.isArray(data.members) ? data.members : [];
-          console.log("Members count:", list.length);
-          setMembersCount(list.length);
-          return;
-        }
-      } catch (err) {
-        console.warn("Direct fetch failed (likely CORS):", err.message);
-      }
-
       for (const proxyUrl of corsProxies) {
         if (!mounted) return;
         try {
@@ -90,13 +73,7 @@ export function Homepage() {
             A smol web dev who likes open source stuff, and programming. <br />
             Computers are cool :)
           </h4>
-          {membersCount !== null && membersCount < 30 && (
-            <a href={"https://link.aregus.me/club"} target="_blank">
-              <button className="font-regular-exo cursor-pointer mt-4 bg-yellow-400 rounded-xl text-black w-48 h-8">
-                My Brawl Stars Club
-              </button>
-            </a>
-          )}
+
           <div className="card">
             <div className="flex justify-center items-center mb-4">
               <motion.div
@@ -135,6 +112,7 @@ export function Homepage() {
                 </motion.div>
               </motion.div>
             </div>
+
             <div className="h-8">
               <BrowserView>
                 {hmm ? (
@@ -164,6 +142,13 @@ export function Homepage() {
                 <AnimatedText />
               </MobileView>
             </div>
+            {membersCount !== null && membersCount < 30 && (
+              <a href={"https://link.aregus.me/club"} target="_blank">
+                <button className="font-regular-exo cursor-pointer mt-4 bg-yellow-400 rounded-xl text-black w-48 h-8">
+                  My Brawl Stars Club
+                </button>
+              </a>
+            )}
             <SocialIcons useHmm={setHmm} />
             <div className="flex flex-col items-center justify-center ml-[9%] md:ml-[7%]">
               <div
