@@ -30,7 +30,7 @@ h2 {
 }
 
 .card {
-  margin-top: 8vh;
+  margin-top: 3vh;
   background-color: #26262a;
   border-radius: 5vh;
   padding-bottom: 5vh;
@@ -40,11 +40,11 @@ h2 {
 
 @media (min-width: 1024px) {
   .card {
-    margin-top: 3vh;
+    margin-top: 2vh;
     background-color: #26262a;
     border-radius: 5vh;
     padding-bottom: 5vh;
     width: 100vh;
-    padding-top: 3vh;
+    padding-top: 2vh;
   }
 }
