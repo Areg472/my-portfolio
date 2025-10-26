@@ -8,7 +8,7 @@ import { MobileView, BrowserView } from "react-device-detect";
 
 export function Homepage() {
   const [hmm, setHmm] = useState(null);
-  const [membersCount, setMembersCount] = useState(null); // null = not loaded yet
+  const [membersCount, setMembersCount] = useState(null);
 
   function HandleHoverVid(value) {
     setHmm(value);
@@ -30,10 +30,7 @@ export function Homepage() {
           if (!mounted) return;
           if (res.ok) {
             const data = await res.json();
-            console.log("Fetched data via proxy:", data);
-            console.log("Members array:", data.members);
             const list = Array.isArray(data.members) ? data.members : [];
-            console.log("Members count:", list.length);
             setMembersCount(list.length);
             return;
           }
