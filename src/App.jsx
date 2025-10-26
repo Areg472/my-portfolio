@@ -38,10 +38,10 @@ function AnimatedRoutes() {
 export function App() {
   return (
     <Router>
-      <div className="navbar-wrapper">
+      <div className="w-full flex justify-center px-4">
         <MemoizedNavbar />
       </div>
-      <div className="page-wrapper">
+      <div className="w-full mt-8 px-4">
         <AnimatedRoutes />
       </div>
     </Router>
