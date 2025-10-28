@@ -9,6 +9,7 @@ import { MobileView, BrowserView } from "react-device-detect";
 export function Homepage() {
   const [hmm, setHmm] = useState(null);
   const [membersCount, setMembersCount] = useState(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   function HandleHoverVid(value) {
     setHmm(value);
@@ -32,6 +33,7 @@ export function Homepage() {
             const data = await res.json();
             const list = Array.isArray(data.members) ? data.members : [];
             setMembersCount(list.length);
+            setHasLoaded(true);
             return;
           }
         } catch (err) {
@@ -40,7 +42,10 @@ export function Homepage() {
       }
 
       console.error("All fetch attempts failed");
-      if (mounted) setMembersCount(0);
+      if (mounted) {
+        setMembersCount(0);
+        setHasLoaded(true);
+      }
     }
     fetchMembers();
     return () => {
@@ -139,7 +144,7 @@ export function Homepage() {
                 <AnimatedText />
               </MobileView>
             </div>
-            {membersCount !== null && membersCount < 30 && (
+            {hasLoaded && membersCount !== null && membersCount < 30 && (
               <a href={"https://link.aregus.me/club"} target="_blank">
                 <button className="font-regular-exo cursor-pointer mt-4 bg-yellow-400 rounded-xl text-black w-48 h-8">
                   My Brawl Stars Club
