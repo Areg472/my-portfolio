@@ -20,14 +20,19 @@ export function Homepage() {
     async function fetchMembers() {
       const apiUrl = "http://159.89.151.109:3000/club/2CGUYCGUY";
       const corsProxies = [
+        `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
+        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,
+        `https://cors-anywhere.herokuapp.com/${apiUrl}`,
         `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
       ];
 
       for (const proxyUrl of corsProxies) {
         if (!mounted) return;
         try {
-          console.log("Trying CORS proxy...");
-          const res = await fetch(proxyUrl);
+          console.log(`Trying proxy: ${proxyUrl.split("?")[0]}...`);
+          const res = await fetch(proxyUrl, {
+            signal: AbortSignal.timeout(5000), // 5 second timeout
+          });
           if (!mounted) return;
           if (res.ok) {
             const data = await res.json();
@@ -38,7 +43,7 @@ export function Homepage() {
             return;
           }
         } catch (err) {
-          console.warn(`Proxy ${proxyUrl} failed:`, err.message);
+          console.warn(`Proxy failed:`, err.message);
         }
       }
 
