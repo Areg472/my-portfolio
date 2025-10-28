@@ -31,7 +31,7 @@ export function Homepage() {
         try {
           console.log(`Trying proxy: ${proxyUrl.split("?")[0]}...`);
           const res = await fetch(proxyUrl, {
-            signal: AbortSignal.timeout(5000), // 5 second timeout
+            signal: AbortSignal.timeout(5000),
           });
           if (!mounted) return;
           if (res.ok) {
