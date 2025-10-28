@@ -43,7 +43,7 @@ export function Homepage() {
 
       console.error("All fetch attempts failed");
       if (mounted) {
-        setMembersCount(0);
+        setMembersCount(null);
         setHasLoaded(true);
       }
     }
