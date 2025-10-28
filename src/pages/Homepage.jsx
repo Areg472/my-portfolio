@@ -32,6 +32,7 @@ export function Homepage() {
           if (res.ok) {
             const data = await res.json();
             const list = Array.isArray(data.members) ? data.members : [];
+            console.log("Members fetched successfully:", list);
             setMembersCount(list.length);
             setHasLoaded(true);
             return;
