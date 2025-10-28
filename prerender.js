@@ -40,15 +40,17 @@ routes.forEach((route) => {
     <meta property="og:type" content="website">
     <meta property="og:title" content="${route.title}">
     <meta property="og:description" content="${route.description}">
-    <meta property="og:image" content="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPpv4cXqYtq7IoNXS4kB8sK2GLTJa5YUnemuxw">
-    <meta property="og:image:secure_url" content="https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPpv4cXqYtq7IoNXS4kB8sK2GLTJa5YUnemuxw">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="200">
-    <meta property="og:image:alt" content="Image of ${route.title} site">
+    <meta property="og:image" content="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa">
+    <meta property="og:image:secure_url" content="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${route.title} - ${route.description}">
     <meta name="twitter:creator" content="Areg">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${route.title}">
     <meta name="twitter:description" content="${route.description}">
+    <meta name="twitter:image" content="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa">
   `;
 
   if (!html.includes('property="og:title"')) {
