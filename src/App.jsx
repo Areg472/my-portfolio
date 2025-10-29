@@ -10,7 +10,6 @@ import { Work } from "./pages/Work.jsx";
 import { AnimatePresence } from "motion/react";
 import { Navbar } from "./components/Navbar.jsx";
 import PropTypes from "prop-types";
-import React from "react";
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
@@ -19,8 +18,6 @@ Layout.propTypes = {
 function Layout({ children }) {
   return <>{children}</>;
 }
-
-const MemoizedNavbar = React.memo(Navbar);
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -38,10 +35,8 @@ function AnimatedRoutes() {
 export function App() {
   return (
     <Router>
-      <div className="w-full flex justify-center px-4">
-        <MemoizedNavbar />
-      </div>
-      <div className="w-full mt-8 px-4">
+      <Navbar />
+      <div className="w-full pt-16 px-4">
         <AnimatedRoutes />
       </div>
     </Router>
