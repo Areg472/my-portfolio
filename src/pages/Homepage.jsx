@@ -20,7 +20,6 @@ export function Homepage() {
     async function fetchMembers() {
       const apiUrl = "http://159.89.151.109:3000/club/2CGUYCGUY";
       const corsProxies = [
-        `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
         `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,
         `https://cors-anywhere.herokuapp.com/${apiUrl}`,
         `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
