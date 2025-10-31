@@ -18,35 +18,29 @@ export function Homepage() {
   useEffect(() => {
     let mounted = true;
     async function fetchMembers() {
-      const apiUrl = "http://159.89.151.109:3000/club/2CGUYCGUY";
-      const corsProxies = [
-        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,
-        `https://cors-anywhere.herokuapp.com/${apiUrl}`,
-        `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
-      ];
+      const apiUrl = "/api/club/2CGUYCGUY";
 
-      for (const proxyUrl of corsProxies) {
+      try {
+        console.log("Fetching members...");
+        const res = await fetch(apiUrl, {
+          signal: AbortSignal.timeout(5000),
+        });
+
         if (!mounted) return;
-        try {
-          console.log(`Trying proxy: ${proxyUrl.split("?")[0]}...`);
-          const res = await fetch(proxyUrl, {
-            signal: AbortSignal.timeout(5000),
-          });
-          if (!mounted) return;
-          if (res.ok) {
-            const data = await res.json();
-            const list = Array.isArray(data.members) ? data.members : [];
-            console.log("Members fetched successfully:", list);
-            setMembersCount(list.length);
-            setHasLoaded(true);
-            return;
-          }
-        } catch (err) {
-          console.warn(`Proxy failed:`, err.message);
+
+        if (res.ok) {
+          const data = await res.json();
+          const list = Array.isArray(data.members) ? data.members : [];
+          console.log("Members fetched successfully:", list);
+          setMembersCount(list.length);
+          setHasLoaded(true);
+          return;
         }
+      } catch (err) {
+        console.warn("Fetch failed:", err.message);
       }
 
-      console.error("All fetch attempts failed");
+      console.error("Fetch attempt failed");
       if (mounted) {
         setMembersCount(null);
         setHasLoaded(true);
