@@ -26,7 +26,7 @@ export function Navbar() {
         transition={{ type: "spring", duration: 1.3, bounce: 0.3, delay: 1.2 }}
         style={{ willChange: "transform" }}
       >
-        <Link to="/Work">
+        <Link to="/work">
           <motion.button
             whileHover={{ scale: 1.1, rotate: 2 }}
             whileTap={{ scale: 0.95, rotate: -2 }}

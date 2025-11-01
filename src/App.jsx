@@ -26,7 +26,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="*" element={<Homepage />} />
         <Route path="/" element={<Homepage />} />
-        <Route path={"/Work"} element={<Work />} />
+        <Route path={"/work"} element={<Work />} />
       </Routes>
     </AnimatePresence>
   );
