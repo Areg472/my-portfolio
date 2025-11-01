@@ -7,7 +7,11 @@ import { isMobile } from "react-device-detect";
 export function Work() {
   return (
     <>
-      <MetaTags title={"Areg"} description="My smol OwO work!" name="Areg" />
+      <MetaTags
+        title={"Areg - Work"}
+        description="My smol OwO work!"
+        name="Areg"
+      />
       <motion.div
         initial={{ rotate: isMobile ? 0 : 150, scale: 0, opacity: 0 }}
         transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
