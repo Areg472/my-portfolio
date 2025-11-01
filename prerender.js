@@ -43,18 +43,23 @@ routes.forEach((route) => {
     );
   }
 
-  // Remove existing Open Graph and Twitter meta tags
-  html = html.replace(/<!-- Theme Color for Discord -->[\s\S]*?(?=<!--|\n|$)/g, "");
-  html = html.replace(/<meta name="theme-color".*?>/g, "");
-  html = html.replace(
-    /<!-- Open Graph \/ Facebook -->[\s\S]*?<!-- Twitter -->/g,
-    "",
-  );
-  html = html.replace(/<meta property="og:.*?".*?>/g, "");
-  html = html.replace(/<meta name="twitter:.*?".*?>/g, "");
+  // Remove existing theme-color meta tag
+  html = html.replace(/<meta name="theme-color"[^>]*>/gi, "");
 
-  // Add new meta tags
-  const ogTags = `<!-- Theme Color for Discord -->
+  // Remove existing Open Graph meta tags
+  html = html.replace(/<meta property="og:[^"]*"[^>]*>/gi, "");
+
+  // Remove existing Twitter meta tags
+  html = html.replace(/<meta name="twitter:[^"]*"[^>]*>/gi, "");
+
+  // Remove comment markers (but be careful not to remove script comments)
+  html = html.replace(/<!-- Theme Color for Discord -->/g, "");
+  html = html.replace(/<!-- Open Graph \/ Facebook -->/g, "");
+  html = html.replace(/<!-- Twitter -->/g, "");
+
+  // Add new meta tags - insert before </head>
+  const ogTags = `
+    <!-- Theme Color for Discord -->
     <meta name="theme-color" content="#5865F2" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -74,9 +79,9 @@ routes.forEach((route) => {
     <meta name="twitter:title" content="${route.title}" />
     <meta name="twitter:description" content="${route.description}" />
     <meta name="twitter:image" content="${route.image}" />
-  `;
+`;
 
-  html = html.replace("</head>", `${ogTags}</head>`);
+  html = html.replace("</head>", `${ogTags}  </head>`);
 
   if (route.path === "/") {
     writeFileSync(indexPath, html, "utf-8");
