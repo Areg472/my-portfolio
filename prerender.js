@@ -10,8 +10,14 @@ const routes = [
     path: "/",
     title: "Areg",
     description: "Areg's small little corner in the internet :3",
+    image: "https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa",
   },
-  { path: "/Work", title: "Areg", description: "My smol OwO work!" },
+  {
+    path: "/Work",
+    title: "Areg - Work",
+    description: "My smol OwO work!",
+    image: "https://file.garden/Zp_ExamEPnCWgsNn/logo.jpg",
+  },
 ];
 
 const distPath = join(__dirname, "dist");
@@ -40,8 +46,8 @@ routes.forEach((route) => {
     <meta property="og:type" content="website">
     <meta property="og:title" content="${route.title}">
     <meta property="og:description" content="${route.description}">
-    <meta property="og:image" content="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa">
-    <meta property="og:image:secure_url" content="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa">
+    <meta property="og:image" content="${route.image}">
+    <meta property="og:image:secure_url" content="${route.image}">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -50,7 +56,7 @@ routes.forEach((route) => {
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${route.title}">
     <meta name="twitter:description" content="${route.description}">
-    <meta name="twitter:image" content="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa">
+    <meta name="twitter:image" content="${route.image}">
   `;
 
   if (!html.includes('property="og:title"')) {
