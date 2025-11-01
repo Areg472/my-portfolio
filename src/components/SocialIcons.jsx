@@ -11,7 +11,7 @@ export function SocialIcons({ useHmm }) {
   return (
     <div className="socialicons mt-[18px] md:mt-[20px]">
       <div
-        className="flex flex-row gap-4"
+        className="flex flex-row gap-2.5 md:gap-4"
         onMouseLeave={() => HandleHover(null)}
       >
         <Icon link="https://www.youtube.com/@aregthevideoeditor">
