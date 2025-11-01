@@ -61,11 +61,8 @@ routes.forEach((route) => {
 
   // Add new meta tags - insert before </head>
   const ogTags = `
-    <!-- Theme Color for Discord -->
-    <meta name="theme-color" content="#5865F2" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Areg's Portfolio" />
     <meta property="og:url" content="${route.url}" />
     <meta property="og:title" content="${route.title}" />
     <meta property="og:description" content="${route.description}" />
