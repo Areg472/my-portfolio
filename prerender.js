@@ -8,12 +8,14 @@ const __dirname = dirname(__filename);
 const routes = [
   {
     path: "/",
+    url: "https://aregus.me/",
     title: "Areg",
     description: "Areg's small little corner in the internet :3",
     image: "https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa",
   },
   {
     path: "/work",
+    url: "https://aregus.me/work/",
     title: "Areg - Work",
     description: "My smol OwO work!",
     image: "https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa",
@@ -64,7 +66,7 @@ routes.forEach((route) => {
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Areg's Portfolio" />
-    <meta property="og:url" content="https://aregus.me${route.path}" />
+    <meta property="og:url" content="${route.url}" />
     <meta property="og:title" content="${route.title}" />
     <meta property="og:description" content="${route.description}" />
     <meta property="og:image" content="${route.image}" />
@@ -75,7 +77,7 @@ routes.forEach((route) => {
     <!-- Twitter -->
     <meta name="twitter:creator" content="Areg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://aregus.me${route.path}" />
+    <meta name="twitter:url" content="${route.url}" />
     <meta name="twitter:title" content="${route.title}" />
     <meta name="twitter:description" content="${route.description}" />
     <meta name="twitter:image" content="${route.image}" />

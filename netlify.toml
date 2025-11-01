@@ -9,11 +9,6 @@
   force = true
 
 [[redirects]]
-  from = "/work"
-  to = "/work/index.html"
-  status = 200
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
