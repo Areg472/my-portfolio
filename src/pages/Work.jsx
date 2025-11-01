@@ -14,7 +14,7 @@ export function Work() {
         animate={{ rotate: 0, scale: 1, opacity: 1 }}
         exit={{ rotate: isMobile ? 0 : -150, scale: 0, opacity: 0 }}
       >
-        <div className="container font-regularExo">
+        <div className="container font-regularExo flex flex-col items-center">
           <WorkCard
             title="Ocean+"
             description="The ultimate Vyond and GoAnimate streaming platform!"

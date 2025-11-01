@@ -36,8 +36,10 @@ export function App() {
   return (
     <Router>
       <Navbar />
-      <div className="w-full pt-16 px-4">
-        <AnimatedRoutes />
+      <div className="w-full pt-16 flex justify-center px-4">
+        <div className="max-w-3xl w-full">
+          <AnimatedRoutes />
+        </div>
       </div>
     </Router>
   );
