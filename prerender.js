@@ -44,7 +44,10 @@ routes.forEach((route) => {
   }
 
   // Remove existing Open Graph and Twitter meta tags
-  html = html.replace(/<!-- Theme Color for Discord -->[\s\S]*?(?=<!--|\n|$)/g, "");
+  html = html.replace(
+    /<!-- Theme Color for Discord -->[\s\S]*?(?=<!--|\n|$)/g,
+    "",
+  );
   html = html.replace(/<meta name="theme-color".*?>/g, "");
   html = html.replace(
     /<!-- Open Graph \/ Facebook -->[\s\S]*?<!-- Twitter -->/g,
