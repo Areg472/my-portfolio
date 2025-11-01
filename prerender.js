@@ -27,8 +27,10 @@ let baseHtml = readFileSync(indexPath, "utf-8");
 routes.forEach((route) => {
   let html = baseHtml;
 
+  // Replace title
   html = html.replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`);
 
+  // Replace or add description
   if (html.includes('<meta name="description"')) {
     html = html.replace(
       /<meta name="description" content=".*?">/,
@@ -41,27 +43,36 @@ routes.forEach((route) => {
     );
   }
 
-  const ogTags = `
-    <meta property="og:url" content="https://aregus.me${route.path}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="${route.title}">
-    <meta property="og:description" content="${route.description}">
-    <meta property="og:image" content="${route.image}">
-    <meta property="og:image:secure_url" content="${route.image}">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="${route.title} - ${route.description}">
-    <meta name="twitter:creator" content="Areg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${route.title}">
-    <meta name="twitter:description" content="${route.description}">
-    <meta name="twitter:image" content="${route.image}">
+  // Remove existing Open Graph and Twitter meta tags
+  html = html.replace(
+    /<!-- Open Graph \/ Facebook -->[\s\S]*?<!-- Twitter -->/g,
+    "",
+  );
+  html = html.replace(/<meta property="og:.*?".*?>/g, "");
+  html = html.replace(/<meta name="twitter:.*?".*?>/g, "");
+
+  // Add new meta tags
+  const ogTags = `<!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aregus.me${route.path}" />
+    <meta property="og:title" content="${route.title}" />
+    <meta property="og:description" content="${route.description}" />
+    <meta property="og:image" content="${route.image}" />
+    <meta property="og:image:secure_url" content="${route.image}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="${route.title} - ${route.description}" />
+    <!-- Twitter -->
+    <meta name="twitter:creator" content="Areg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://aregus.me${route.path}" />
+    <meta name="twitter:title" content="${route.title}" />
+    <meta name="twitter:description" content="${route.description}" />
+    <meta name="twitter:image" content="${route.image}" />
   `;
 
-  if (!html.includes('property="og:title"')) {
-    html = html.replace("</head>", `${ogTags}\n  </head>`);
-  }
+  html = html.replace("</head>", `${ogTags}</head>`);
 
   if (route.path === "/") {
     writeFileSync(indexPath, html, "utf-8");
