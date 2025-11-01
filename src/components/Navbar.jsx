@@ -1,19 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
 
 export function Navbar() {
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    setHasAnimated(true);
-  }, []);
-
   return (
     <div className="fixed top-0 left-0 right-0 w-full py-3 md:pt-6 md:pb-6 bg-[#1d1e25] flex flex-col md:flex-row justify-center md:space-x-10 space-y-4 md:space-y-0 items-center z-50">
       <motion.div
         initial={{ y: -140 }}
-        animate={{ y: hasAnimated ? 0 : -10 }}
+        animate={{ y: 0 }}
         transition={{ type: "spring", duration: 1.3, bounce: 0.3, delay: 1 }}
         style={{ willChange: "transform" }}
       >
@@ -29,7 +22,7 @@ export function Navbar() {
       </motion.div>
       <motion.div
         initial={{ y: -140 }}
-        animate={{ y: hasAnimated ? 0 : -10 }}
+        animate={{ y: 0 }}
         transition={{ type: "spring", duration: 1.3, bounce: 0.3, delay: 1.2 }}
         style={{ willChange: "transform" }}
       >

@@ -4,7 +4,7 @@ import "./Homepage.css";
 import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
-import { MobileView, BrowserView } from "react-device-detect";
+import { MobileView, BrowserView, isMobile } from "react-device-detect";
 
 export function Homepage() {
   const [hmm, setHmm] = useState(null);
@@ -60,10 +60,10 @@ export function Homepage() {
         name="Areg"
       />
       <motion.div
-        initial={{ rotate: 150, scale: 0, opacity: 0 }}
+        initial={{ rotate: isMobile ? 0 : 150, scale: 0, opacity: 0 }}
         transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
         animate={{ rotate: 0, scale: 1, opacity: 1 }}
-        exit={{ rotate: -150, scale: 0, opacity: 0 }}
+        exit={{ rotate: isMobile ? 0 : -150, scale: 0, opacity: 0 }}
       >
         <div className="container font-regularExo">
           <h1 className="font-thin mb-4 text-3xl md:text-5xl font-bolditalic-exo">
