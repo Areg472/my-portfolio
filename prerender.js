@@ -33,13 +33,13 @@ routes.forEach((route) => {
   // Replace or add description
   if (html.includes('<meta name="description"')) {
     html = html.replace(
-      /<meta name="description" content=".*?">/,
-      `<meta name="description" content="${route.description}">`,
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${route.description}" />`,
     );
   } else {
     html = html.replace(
       "</head>",
-      `  <meta name="description" content="${route.description}">\n  </head>`,
+      `  <meta name="description" content="${route.description}" />\n  </head>`,
     );
   }
 
