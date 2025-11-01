@@ -52,17 +52,19 @@ routes.forEach((route) => {
   html = html.replace(/<meta name="twitter:.*?".*?>/g, "");
 
   // Add new meta tags
-  const ogTags = `<!-- Open Graph / Facebook -->
+  const ogTags = `<!-- Theme Color for Discord -->
+    <meta name="theme-color" content="#5865F2" />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Areg's Portfolio" />
     <meta property="og:url" content="https://aregus.me${route.path}" />
     <meta property="og:title" content="${route.title}" />
     <meta property="og:description" content="${route.description}" />
     <meta property="og:image" content="${route.image}" />
     <meta property="og:image:secure_url" content="${route.image}" />
-    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="${route.title} - ${route.description}" />
+    <meta property="og:image:alt" content="${route.title}" />
     <!-- Twitter -->
     <meta name="twitter:creator" content="Areg" />
     <meta name="twitter:card" content="summary_large_image" />
