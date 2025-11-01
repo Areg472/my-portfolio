@@ -81,7 +81,11 @@ routes.forEach((route) => {
     <meta name="twitter:image" content="${route.image}" />
 `;
 
-  html = html.replace("</head>", `${ogTags}  </head>`);
+  // Insert meta tags before the first script tag in head
+  const headEndIndex = html.indexOf("</head>");
+  if (headEndIndex !== -1) {
+    html = html.slice(0, headEndIndex) + ogTags + html.slice(headEndIndex);
+  }
 
   if (route.path === "/") {
     writeFileSync(indexPath, html, "utf-8");
