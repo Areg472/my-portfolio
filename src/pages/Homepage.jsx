@@ -61,7 +61,11 @@ export function Homepage() {
       />
       <motion.div
         initial={{ rotate: isMobile ? 0 : 150, scale: 0, opacity: 0 }}
-        transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
+        transition={{
+          duration: 0.75,
+          type: "spring",
+          bounce: isMobile ? 0.2 : 0.3,
+        }}
         animate={{ rotate: 0, scale: 1, opacity: 1 }}
         exit={{ rotate: isMobile ? 0 : -150, scale: 0, opacity: 0 }}
       >
