@@ -1,6 +1,6 @@
 import "./Credits.css";
 
-export function Credits() {
+export default function Credits() {
   return (
     <>
       <a className="hmm" href="https://github.com/re1exe" target="_blank">
