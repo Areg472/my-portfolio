@@ -39,10 +39,9 @@ export function Work() {
             image_alt="A screenshot of my hackathon project website"
           />
         </div>
-        <div className="mt-12">
+        <div className="mb-12">
           <Credits />
         </div>
-        */
       </motion.div>
     </>
   );
