@@ -1,5 +1,5 @@
 import MetaTags from "../components/MetaTags.jsx";
-import { Credits } from "../components/Credits.jsx";
+import Credits from "../components/Credits.jsx";
 import { motion } from "motion/react";
 import WorkCard from "../components/WorkCard.jsx";
 import { isMobile } from "react-device-detect";
