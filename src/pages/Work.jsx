@@ -1,5 +1,5 @@
 import MetaTags from "../components/MetaTags.jsx";
-/*import { Credits } from "../components/Credits.jsx";*/
+import { Credits } from "../components/Credits.jsx";
 import { motion } from "motion/react";
 import WorkCard from "../components/WorkCard.jsx";
 import { isMobile } from "react-device-detect";
@@ -39,7 +39,10 @@ export function Work() {
             image_alt="A screenshot of my hackathon project website"
           />
         </div>
-        {/*<div className="mt-12"><Credits /></div>*/}
+        <div className="mt-12">
+          <Credits />
+        </div>
+        */
       </motion.div>
     </>
   );

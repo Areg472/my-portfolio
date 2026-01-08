@@ -5,6 +5,7 @@ import AnimatedText from "../components/AnimatedText.jsx";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { MobileView, BrowserView, isMobile } from "react-device-detect";
+import Credits from "../components/Credits.jsx";
 
 export function Homepage() {
   const [hmm, setHmm] = useState(null);
@@ -193,7 +194,7 @@ export function Homepage() {
               </div>
             </div>
           </div>
-          {/*<Credits />*/}
+          <Credits />
         </div>
       </motion.div>
     </>
