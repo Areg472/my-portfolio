@@ -215,7 +215,7 @@ export function Homepage() {
               <a href="https://ultrafastparrot.net/next/AREG">
                 <motion.button
                   className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
-                  whileHover={{ scale: 1.25 }}
+                  whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   Next
