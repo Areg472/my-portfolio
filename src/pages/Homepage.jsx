@@ -194,7 +194,7 @@ export function Homepage() {
               </div>
             </div>
             <div className="gap-4 flex flex-col lg:flex-row justify-center mt-8">
-              <a href="https://ultrafastparrot.net/prev/AREG">
+              <a href="https://ultrafastparrot.net/prev/areg">
                 <motion.button
                   className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
                   whileHover={{ scale: 1.1 }}
@@ -212,7 +212,7 @@ export function Homepage() {
                   ultrafastparrot
                 </motion.button>
               </a>
-              <a href="https://ultrafastparrot.net/next/AREG">
+              <a href="https://ultrafastparrot.net/next/areg">
                 <motion.button
                   className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
                   whileHover={{ scale: 1.1 }}
