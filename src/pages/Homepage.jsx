@@ -193,6 +193,31 @@ export function Homepage() {
                 </div>
               </div>
             </div>
+            <div className="gap-4 flex flex-col lg:flex-row justify-center mt-8">
+              <a href="https://ultrafastparrot.net/prev/AREG">
+                <motion.button className="border-black cursor-pointer hover:scale-110 transition-all ease-out border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10">
+                  Prev
+                </motion.button>
+              </a>
+              <a href="https://ultrafastparrot.net/">
+                <motion.button
+                  className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-52 text-black h-10"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  ultrafastparrot
+                </motion.button>
+              </a>
+              <a href="https://ultrafastparrot.net/next/AREG">
+                <motion.button
+                  className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
+                  whileHover={{ scale: 1.25 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  Next
+                </motion.button>
+              </a>
+            </div>
           </div>
           <Credits />
         </div>
