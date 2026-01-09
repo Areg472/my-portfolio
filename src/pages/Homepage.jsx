@@ -195,7 +195,11 @@ export function Homepage() {
             </div>
             <div className="gap-4 flex flex-col lg:flex-row justify-center mt-8">
               <a href="https://ultrafastparrot.net/prev/AREG">
-                <motion.button className="border-black cursor-pointer hover:scale-110 transition-all ease-out border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10">
+                <motion.button
+                  className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
                   Prev
                 </motion.button>
               </a>
