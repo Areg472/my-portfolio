@@ -38,6 +38,13 @@ export function Work() {
             image_link="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-42-40%20Areg%20travels.png"
             image_alt="A screenshot of my hackathon project website"
           />
+          <WorkCard
+            title="Fun Quiz"
+            description="A fun quiz for the hack club flavortown ysws!"
+            link="https://fun-quiz.aregus.me/"
+            image_link="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202026-01-11%20at%2020-27-16%20Fun%20quiz!.png"
+            image_alt="A screenshot of my fun quiz website"
+          />
         </div>
         <div className="mb-12">
           <Credits />
