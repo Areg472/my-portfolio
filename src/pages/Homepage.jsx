@@ -138,7 +138,8 @@ export function Homepage() {
                       (hmm === 7 && "Contact") ||
                       (hmm === 8 && "Ocean+ Trailer") ||
                       (hmm === 9 && "Doing the Hackathon") ||
-                      (hmm === 10 && ":3")}
+                      (hmm === 10 && ":3") ||
+                      (hmm === 11 && "🦜")}
                   </motion.h2>
                 ) : (
                   <AnimatedText />
@@ -208,8 +209,9 @@ export function Homepage() {
                   className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-52 text-black h-10"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  onMouseEnter={() => HandleHoverVid(11)}
                 >
-                  ultrafastparrot
+                  Ultra fast parrot
                 </motion.button>
               </a>
               <a href="https://ultrafastparrot.net/next/areg">
