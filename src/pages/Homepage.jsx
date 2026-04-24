@@ -210,6 +210,7 @@ export function Homepage() {
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   onMouseEnter={() => HandleHoverVid(11)}
+                  onMouseLeave={() => HandleHoverVid(null)}
                 >
                   Ultra fast parrot
                 </motion.button>
