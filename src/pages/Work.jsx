@@ -45,6 +45,13 @@ export function Work() {
             image_link="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202026-01-11%20at%2020-27-16%20Fun%20quiz!.png"
             image_alt="A screenshot of my fun quiz website"
           />
+          <WorkCard
+            title="SpotiMetro"
+            description="A website that generates a tracklist based on your metro route!"
+            link="https://spotify-metro.aregus.me/"
+            image_link="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202026-04-24%20at%2022-03-44%20Paris%20Metro%20-%20Metro%20Spotify%20Generator.png"
+            image_alt="A screenshot of my spotimetro website"
+          />
         </div>
         <div className="mb-12">
           <Credits />
